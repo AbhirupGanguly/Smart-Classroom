@@ -1,6 +1,18 @@
-venv/
+# Python
 __pycache__/
 *.pyc
+*.pyo
+# Virtual environment
+venv/
+env/
+# Uploaded videos
 uploads/
+*.mp4
+# AI models
 *.pt
+*.pth
+# OS files
+.DS_Store
+Thumbs.db
+# environment variables
 .env

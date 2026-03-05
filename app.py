@@ -4,15 +4,17 @@ import mysql.connector
 import face_recognition
 from flask import Flask, render_template, request
 from vision_engine import process_video
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = "static/student_images"
+load_dotenv()
+
 DATABASE_CONFIG = {
-    "host": "localhost",
-    "user": "root",
-    "password": "Rup@212004",
-    "database": "classroom_ai"
+    "host": os.getenv("DB_HOST"),
+    "user": os.getenv("DB_USER"),
+    "password": os.getenv("DB_PASSWORD"),
+    "database": os.getenv("DB_NAME")
 }
 
 def get_connection():
