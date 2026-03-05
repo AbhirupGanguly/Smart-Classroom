@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classroom AI Dashboard</title>
+</head>
+<body>
+    <h2>Upload Classroom Video</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="video" required>
+        <button type="submit">Analyze</button>
+    </form>
+
+    <h2>Student Attention Report</h2>
+
+    <table border="1">
+        <tr>
+            <th>Roll</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Final Attention %</th>
+        </tr>
+
+        {% for s in students %}
+        <tr>
+            <td>{{ s[0] }}</td>
+            <td>{{ s[1] }}</td>
+            <td>{{ s[2] }}</td>
+            <td>{{ s[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

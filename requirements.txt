@@ -1,0 +1,9 @@
+flask
+ultralytics
+opencv-python
+face-recognition
+mediapipe
+scipy
+mysql-connector-python
+numpy
+deep-sort-realtime
